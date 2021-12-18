@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+/* fonts */
+
+@font-face {
+  font-family: "GS-bold";
+  font-style: normal;
+    font: bold;
+
+  font-weight: 600;
+  font-stretch: 100%;
+  src: url("../fonts/GothamSSm-Bold_Web.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GS-light";
+  font-style: normal;
+    font: bold;
+
+  font-weight: 600;
+  font-stretch: 100%;
+  src: url("../fonts/GothamSSm-Light_Web.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GS-book";
+    font: bold;
+
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  src: url("../fonts/GothamSSm-Book_Web.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "GS-medium";
+  font: bold;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  src: url("../fonts/GothamSSm-Medium_Web.woff2") format("woff2");
+}
+.Page-1 {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../Images/Tesla-Page1.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.Page-2 {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../Images/Tesla-Page2.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.Page-3 {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../Images/Tesla-Page3.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  font-family: "GS-medium";
+  line-height: 21px;
+  font-size: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Logo {
+  padding: 5px 5px;
+  min-height: 48px;
+  width: 157px;
+}
+.Centered-nav-links {
+  min-height: 54px;
+  width: 50px;
+  min-width: 700px;
+  display: flex;
+  float: inline-start;
+  text-align: center;
+  padding: 0px 0px 0px 100px;
+}
+.Right-nav-links {
+    width: 280px;
+    display: flex;
+min width: 350px;
+min-height: 54px;
+  padding: 0px 0px 0px 32px;
+}
+.Centered-nav-links ul li {
+  
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.Right-nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.Centered-nav-links ul li a {
+  font-family: "GS-light";
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+.Right-nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+.Centered-nav-links ul li::after {
+ 
+border-radius: 12px solid;
+width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transform: 0.5s;
+}
+.Centered-nav-links ul li:hover::after {
+  width: 100%;
+}
+.Right-nav-links ul li::after {
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transform: 0.5s;
+}
+.Right-nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.Displaytitle {
+  text-align: center;
+  font-family: "GS-bold";
+  font-weight: 500;
+  color: white;
+  padding-top: 60px;
+  font-size: 30px;
+}
+.Footer {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+padding: 396px 0px 0px 0px;
+word-spacing: normal;
+  justify-content: space-between;
+  align-items: center;
+  word-spacing: 10px;
+  
+}
+.RightFooter {
+  list-style: none;
+  color: white;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+.RightFooter li {
+  list-style: none;
+  padding: 8px 12px;
+  position: relative;
+    font-size: 40px;
+
+}
+.MiddleFooter {
+  list-style: none;
+  color: white;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+
+}
+.MiddleFooter li {
+  list-style: none;
+  padding: 8px 12px;
+  position: relative;
+    font-size: 40px;
+
+}
+.SpeedMeter{
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+
+.LeftFooter {
+  list-style: none;
+  color: white;
+  text-align: left;
+  padding: 0px 0px 0px 407px;
+}
+.LeftFooter li {
+  list-style: none;
+  padding: 8px 12px;
+  position: relative;
+  font-size: 40px;
+}
+.BottomLink {
+  list-style: none;
+  color: white;
+  text-align: right;
+  padding: 0px 460px 0px 0px;
+}
+.BottomLink a{
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 12px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  width: 164px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(223, 223, 223);
+  border-radius: 20px;
+  background-color: transparent;
+  font-family: "GS-medium", "Times New Roman";
+  font-size: 20px;
+}
+.BottomLink a:hover {
+  border-radius: 15px;
+  border: 2px solid white;
+  color: black;
+  background: white;
+  transition: 1s;
+}
+ .Menu-List ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  padding: 5px;
+  font-size: 12px;
+  font-family: "GS-bold";
+}
+.Menu-List ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav .fa{
+display: none;  
+color:black;
+text-align: right;
+}
+@media(max-width: 700px) {
+  font-size: 20px;
+}
+  .Menu-List ul li {
+    display: block;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+  }
+  .Menu-List {
+    position: absolute;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 310px;
+    top: 0;
+    right: -310px;
+    text-align: lest;
+    z-index: 2;
+  }
+  nav .fa{
+    display: block;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .Menu-List ul{
+    padding: 30px;
+  }
+}
