@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23.1 - fundamentals of this</title>
+</head>
+<body>
+  <!--
+  Question 1:
+  In your own words what will this point to and why?(Note this is the global scope):
+  console.log(this);
+  -->
+  <!-- 
+    Solution 1:
+    to the window
+   -->
+
+  <!--
+    Question 2.b:
+    a. In your own words what will this point to and why.
+    const myObj = {
+      name: "Timmy",
+      greet: () => {
+        console.log(`Hello ${this.name}`);
+      },
+    };
+    myObj.greet();
+    -->
+  <!-- 
+      Solution 2.a:
+      to the Object
+     -->
+     
+    <!--
+      Question 2.b:
+      b. How can you fix this code.
+      const myObj = {
+      name: "Timmy",
+      greet: () => {
+        console.log(`Hello ${this.name}`);
+      },
+      };
+      -->
+    <!-- 
+        Solution 2.b:
+
+      const myObj = {
+        name: "Timmy",
+        greet: () => {
+          console.log(`Hello ${this.name}`);
+        },
+      };
+      myObj.greet();
+        
+      Question 3.a:
+
+      Solution 3.a :
+      Because this is an arrow-type function, pointing is at the window.
+      
+      Question 3.b:
+      answer :Because this element has no parent.
+
+
+      // Question 4:
+      // ? In your own words what will this point to and why?
+      const myFuncArrow = () => {
+        console.log(this);
+      };
+    
+      Solution 4 :
+      This in this case is pointing to the window because this is in an arrow function.
+
+
+      // Question 5:
+      // ? a. In your own words what will this point to and why.
+      // ? b. How can you fix this code.
+      document.querySelector(".element").addEventListener(() => {
+        console.log(this);
+      });
+
+      Solution 5.a :
+      This in this case is pointing to the window because this is in an arrow function.
+
+      Solution 5.b :
+    Need to change the current arrow function to a normal function and it will solve the problem as soon as we connect a
+    selector that will hold our element..
+
+      document.getElementsByClassName(".element").addEventListener(function () {
+        console.log(this);
+      });
+-->
+</body>
+</html>
