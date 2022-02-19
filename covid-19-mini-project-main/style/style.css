@@ -1,0 +1,271 @@
+:root {
+    --turquoise:  #4ABDAC;
+  --lightred: #FC4A1A;
+  --orange: #F7B733;
+  --lightgrey: #DFDCE3;
+  --dark: #19181A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+body {
+  background: var(--dark);
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+/* Welcome */
+.splash {
+  background: var(--dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+  text-align: center;
+  line-height: 90vh;
+}
+
+#divChart {
+  background: var(--dark);
+}
+
+.splash.display-none {
+  background: var(--dark);
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  text-align: center;
+  line-height: 90vh;
+  transition:  all 0.5s;
+  display: none;
+}
+
+#title {
+  font-size: 6rem;
+  color: var(--turquoise);
+}
+
+.hiden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in2 {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* Main - Display */
+#open-container {
+  background: var(--dark);
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Continents Grid */
+#continents-grid {
+  width: 74vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  gap: 1rem;
+  column-gap: 4rem;
+}
+
+.item {
+  background-color: var(--orange);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.item:hover {
+  font-weight: bold;
+  background: var(--turquoise);
+  color: white;
+}
+
+/* Fade In & Out Animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translate(-50%);
+}
+
+.from-right {
+  transform: translate(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Data Container */
+#data-container {
+  background: var(--dark);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Back Buttom */
+#backPage1 {
+  background: var(--orange);
+  position: absolute;
+  left: 0;
+  border: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: white;
+  border-radius: 1rem;
+  border: 2px solid var(--lightgrey);
+}
+
+#backPage1:hover {
+  background-color: var(--turquoise);
+  color: var(--lightgrey);
+}
+
+#backhtml {
+  font-size: 30px;
+}
+
+select {
+  width: 40%;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0;
+  margin: 4px 2px;
+  background-color: var(--orange);
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  appearance: none;
+  border-bottom: 2px solid var(--lightgrey);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none; 
+  cursor: pointer;
+}
+
+select:hover,
+select:focus {
+  color: white;
+  background-color: var(--turquoise);
+  border-bottom-color: var(--orange);
+  cursor: pointer;
+}
+
+.select-icon {
+  position: absolute;
+  top: 10.5px;
+  right: 32%;
+  width: 50px;
+  height: 42px;
+  pointer-events: none;
+  border: 2px solid var(--lightgrey);
+  padding-left: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.select-icon svg.icon {
+  transition: fill 0.3s ease;
+  fill: white;
+  cursor: pointer;
+}
+
+select:hover ~ .select-icon,
+select:focus ~ .select-icon {
+  background-color: var(--turquoise);
+  border-color: var(--lightgrey);
+  cursor: pointer;
+}
+
+select:hover ~ .select-icon svg.icon,
+select:focus ~ .select-icon svg.icon {
+  fill: var(--lightgrey);
+  cursor: pointer;
+}
+
+/* Chart */
+#divChart {
+  padding-left: 5%;
+  width: 95vw;
+  height: 70vh;
+  cursor: pointer;
+  font-size: 1rem;
+  background: var(--dark);
+}
