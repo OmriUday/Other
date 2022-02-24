@@ -1,0 +1,47 @@
+/* utils */
+.Wrapper {
+  border: 1px solid black;
+  margin: 2px;
+  height: 200px;
+  width: 220px;
+}
+
+.Title {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.Description {
+  margin-left: 0.5rem;
+  font-size: 0.5rem;
+}
+
+.Links {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: rgb(216, 169, 17);
+  text-decoration: none;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer
+}
+
+/* Card 1 Img*/
+.helicopter {
+  background: url("https://images.unsplash.com/photo-1591154669695-5f2a8d20c089?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") no-repeat center center/cover ;
+  height: 60%;
+}
+
+/* Card 2 Img*/
+.phone {
+  background: url("https://images.unsplash.com/photo-1517404215738-15263e9f9178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center/cover ;
+    height: 60%;
+}
+
+/* Card 3 Img*/
+.books {
+  background: url("https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80") no-repeat center center/cover ;
+    height: 60%;
+}
+
