@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,
+initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Header</h1>
+  <p>Paragraph</p>
+  <a href="#">link</a>
+  <img src="" alt="" />
+  <div class="x">Div with a class</div>
+  <div id="y">Div with an id</div>
+  <input type="text" />
+  <input type="text" />
+  <input type="text" />
+  <script>
+    // Without Query Selector :
+    let header = document.getElementsByTagName('h1')
+    console.log(header);
+    let paragraph = document.getElementsByTagName('p')
+    console.log(paragraph);
+    let link = document.getElementsByTagName('a')
+    console.log(link);
+    let img = document.getElementsByTagName('img')
+    console.log(img);
+    let divClass = document.getElementsByClassName('x')
+    console.log(divClass);
+    let divId = document.getElementById('y')
+    console.log(divId);
+    let inputs = document.getElementsByTagName('input')
+    const inputs_arr = [...inputs]
+    console.log(inputs);
+    // With Query Selector :
+    header = document.querySelector("h1");
+    console.log(header);
+    paragraph = document.querySelector("p");
+    console.log(paragraph);
+    link = document.querySelector("a");
+    console.log(link);
+    img = document.querySelector("img");
+    console.log(img);
+    divClass = document.querySelector(".x");
+    console.log(divClass);
+    divId = document.querySelector("#y");
+    console.log(divId);
+    inputs = document.querySelectorAll("input");
+    console.log(inputs);
+    // Console Printing:
+    document.querySelectorAll("input").forEach((inp) => {
+      console.log(inp);
+    });
+    [...document.getElementsByTagName("input")].forEach((inp) => {
+      console.log(inp);
+    });
+  </script>
+</body>
+
+</html>
